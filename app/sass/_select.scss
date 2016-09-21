@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/*
+    ares-select styles
+    version: 18.11.2015
+
+    ares-select
+
+*/
+
+/* ---------------- ares-select ------------------ */
+.ares-select{
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  cursor: pointer;
+  min-width: 70px;
+  font-size: 16px;
+  @include font-light();
+}
+.ares-select:before{
+  content: '\2228';
+  font-size: .8em;
+  @include absoluteCenterY();
+  right: 0;
+}
+.ares-select__item {
+  position: relative;
+  padding: 5px 15px 5px 5px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+.ares-select_mobile select {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 100%;
+  bottom: -1px;
+}
+.ares-select_custom select{
+  display: none;
+//  position: absolute;
+//  left: 100%;
+}
+.ares-select__popup {
+  position: absolute;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  z-index: 10;
+  overflow: hidden;
+  color: #323232;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.5);
+  background: #fff;
+  margin-left: -1px;
+  min-width: 100px;
+//  width: auto !important;
+}
+.ares-select__popup ul {
+  z-index: 1;
+}
+.ares-select__popup li {
+  padding: 5px 15px 5px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: transparent;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+
+  &:first-child { border-top: none; }
+}
+.ares-select__popup li:hover,
+.ares-select__popup li.active {
+  background: #f16622;
+  color: #fff;
+}
+.ares-select__popup a,
+.ares-select__popup a:visited {
+  color: #323232;
+}
+.ares-select__popup .iScrollVerticalScrollbar {
+  position: absolute;
+  width: 15px;
+  top: 0;
+  bottom: 0;
+  background: #ccc;
+  right: 0;
+  z-index: 3;
+  -webkit-transform: translateZ(0);
+}
+.ares-select__popup .iScrollIndicator {
+  background: #aaa;
+}
+/* ---------------- /ares-select ------------------ */

@@ -1,0 +1,48 @@
+/* --------------- supported-by --------------- */
+.supported-by {
+  padding: 10px 0;
+
+  dt {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  dd {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -5px;
+
+    img {
+      display: block;
+      margin: 5px;
+    }
+  }
+}
+
+@media (min-width: $small) {
+  .supported-by {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .supported-by {
+
+    dt {
+      margin-bottom: 12px;
+    }
+
+    dd {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media (min-width: $large) {
+  .supported-by {
+
+  }
+}
+/* --------------- /supported-by --------------- */

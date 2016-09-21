@@ -1,0 +1,158 @@
+body {
+  font-family: $font;
+}
+/* --------------- site --------------- */
+.site {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 14px;
+  color: #323232;
+
+	p {
+		line-height: 1.2em;
+	}
+
+  .site__header {
+	position: relative;
+	height: 70px;
+	z-index: 3;
+  }
+
+  .site__title {
+	padding: 50px 0;
+	@include font-light();
+	font-size: 24px;
+	color: #fff;
+	text-transform: uppercase;
+	background-color: #f16622;
+	background-size: cover;
+	background-position: top center;
+
+	span {
+	  display: block;
+	  padding: 20px;
+	  background: rgba(0,0,0,.75);
+	  text-align: center;
+	}
+  }
+
+  .site__content {
+	position: relative;
+	z-index: 2;
+  }
+
+  .site__footer {
+	  padding: 20px;
+	  background: #eeeeee;
+	  text-align: center;
+	  color: #323232;
+	  font-size: 14px;
+	  @include font-light();
+
+	  span {
+		  display: block;
+		  padding: 10px;
+	  }
+
+  }
+
+  .site__subtitle {
+	display: block;
+	margin: 0 0 11px;
+	font-size: 16px;
+	line-height: 21px;
+	color: #323232;
+	text-transform: uppercase;
+  }
+}
+
+@media (min-width: $small) {
+  .site {
+	padding: 0;
+
+	.site__header {
+
+	}
+
+	.site__content {
+
+	}
+
+	.site__footer {
+
+	}
+  }
+}
+
+@media (min-width: $medium) {
+  .site {
+	font-size: 18px;
+
+	.site__header {
+	  display: flex;
+	  flex-wrap: wrap;
+	  align-items: center;
+		height: 170px;
+	  padding: 20px;
+	}
+
+	.site__title {
+	  display: flex;
+	  align-items: center;
+	  min-height: 320px;
+	  font-size: 30px;
+
+	  span {
+		width: 100%;
+		padding: 20px calc( 50% - 600px );
+	  }
+	}
+
+	.site__content {
+
+	}
+
+	.site__footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 170px;
+		padding: 20px;
+		font-size: 18px;
+		text-align: left;
+	}
+
+	.site__subtitle {
+	  font-size: 18px;
+	  line-height: 23px;
+	}
+
+  }
+}
+
+@media (min-width: $large) {
+  .site {
+
+
+	.site__header {
+		padding: 0 calc(50% - 590px);
+	}
+
+	.site__content {
+
+	}
+
+	.site__footer {
+		padding: 20px calc(50% - 590px);
+
+	  .site__footer-wrap { padding: 30px calc( 50% - 600px ); }
+	}
+  }
+}
+/* --------------- /site --------------- */

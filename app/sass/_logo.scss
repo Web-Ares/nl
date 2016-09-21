@@ -1,0 +1,35 @@
+/* --------------- logo --------------- */
+.logo {
+  display: block;
+  @include absoluteCenter();
+  max-width: 200px;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: $small) {
+  .logo {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .logo {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 261px;
+    max-width: 100%;
+    transform: translate(0, 0);
+  }
+}
+
+@media (min-width: $large) {
+  .logo {
+
+  }
+}
+/* --------------- /logo --------------- */

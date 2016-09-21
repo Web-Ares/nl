@@ -1,0 +1,210 @@
+/* --------------- services --------------- */
+.services {
+  font-family: $font-light;
+
+  .services__info {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background: #fff;
+
+    h2 {
+      margin-bottom: 15px;
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: #e65f25;
+      font-weight: 400;
+    }
+
+    strong {
+      margin-bottom: 10px;
+      display: block;
+      font-size: 15px;
+    }
+
+    ul {
+      padding: 10px 0;
+      font-size: 12px;
+      line-height: 1.2em;
+
+      li {
+        position: relative;
+        padding: 10px 0 10px 32px;
+
+        &:before {
+          display: block;
+          @include absoluteCenterY();
+          left: 0;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: #22aae2;
+          content: '';
+        }
+
+        &:after {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 2px;
+          width: 8px;
+          height: 8px;
+          margin-top: -8px;
+          transform: rotate(45deg);
+          border: 1px solid #fff;
+          clip: rect(2px, auto, auto, 6px);
+          content: '';
+        }
+      }
+    }
+  }
+
+  .services__form {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background: #eeeeee;
+
+    h2 {
+      margin-bottom: 3px;
+      font-family: $font-semibold;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    p {
+      margin-bottom: 17px;
+    }
+
+    fieldset {
+      margin-bottom: 9px;
+    }
+
+    label {
+      display: inline-block;
+      margin-bottom: 7px;
+    }
+
+    input {
+      width: 100%;
+      height: 30px;
+      padding: 0 10px;
+      border: 1px solid #323232;
+      background: #fff;
+      box-shadow: inset 0 1px 0 #e3e3e3;
+    }
+
+    button[type=submit] {
+      width: 100%;
+      padding: 5px 10px;
+      margin: 20px 0 9px;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.3);
+    }
+  }
+}
+
+@media (min-width: $small) {
+  .services {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 calc(50% - 590px);
+
+    &:after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+      z-index: 1;
+      background: #eeeeee;
+      content: '';
+    }
+
+    .services__info {
+      width: 60%;
+    }
+
+    .services__form {
+      width: 40%;
+    }
+  }
+}
+
+@media (min-width: $medium) {
+  .services {
+
+    .services__info {
+      width: calc(100% - 400px);
+      padding: 22px 0;
+
+      h2 {
+        margin-bottom: 22px;
+        font-size: 48px;
+      }
+
+      h3,
+      strong {
+        margin-bottom: 7px;
+        font-size: 30px;
+      }
+
+      ul {
+        padding: 21px 0;
+        font-size: 24px;
+
+        li {
+          padding: 13px 0 13px 65px;
+
+          &:before {
+            width: 35px;
+            height: 35px;
+          }
+
+          &:after {
+            left: 6px;
+            width: 16px;
+            height: 16px;
+            margin-top: -16px;
+            border: 2px solid #fff;
+            clip: rect(4px, auto, auto, 12px);
+          }
+        }
+      }
+    }
+
+    .services__form {
+      width: 380px;
+      padding: 30px;
+
+      h2 {
+        font-size: 30px;
+      }
+
+      fieldset {
+
+      }
+
+      label {
+
+      }
+
+      input {
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media (min-width: $large) {
+  .services {
+
+  }
+}
+/* --------------- /services --------------- */

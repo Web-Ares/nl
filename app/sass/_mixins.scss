@@ -1,0 +1,76 @@
+@mixin justify() {
+  text-align: justify;
+
+  &:after {
+	display: inline-block;
+	width: 100%;
+	content: '';
+  }
+}
+
+@mixin absoluteCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+}
+
+@mixin absoluteCenterX() {
+  position: absolute;
+  left: 50%;
+  transform: translateX( -50% );
+}
+
+@mixin absoluteCenterY() {
+  position: absolute;
+  top: 50%;
+  transform: translateY( -50% );
+}
+
+@mixin font-regular() {
+  font-family: $font;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-bold() {
+  font-family: $font-bold;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-semibold() {
+  font-family: $font-semibold;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-italic() {
+  font-family: $font-italic;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-light() {
+  font-family: $font-light;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-light-italic() {
+  font-family: $font-light-italic;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin rotate( $deg ) {
+  transform: rotate( $deg + deg );
+}
+
+@mixin transition( $propery, $delay ) {
+  transition: $propery $delay+s ease;
+}
+
+@mixin transition-visibility-opacity ( $delay, $function ) {
+  transition: visibility $delay+s $function, opacity $delay+s $function;
+}

@@ -1,0 +1,141 @@
+/* --------------- meeting --------------- */
+.meeting {
+  font-family: $font-light;
+  font-size: 12px;
+  color: #282a2b;
+  font-family: $font-light;
+
+  .meeting__item {
+    padding: 10px;
+
+    &:nth-child(even) {
+      background: #eeeeee;
+    }
+
+    h3 {
+      font-family: $font-semibold;
+      line-height: 1.2em;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .meeting__title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2em;
+    color: #282a2b;
+  }
+
+  .meeting__pic {
+    display: block;
+    height: 150px;
+    margin-bottom: 10px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &.meeting_revert {
+
+    .meeting__item {
+
+      &:nth-child(odd) {
+        background: #eeeeee;
+      }
+
+      &:nth-child(even) {
+        background: transparent;
+      }
+    }
+  }
+}
+
+@media (min-width: $small) {
+  .meeting {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .meeting {
+    font-size: 18px;
+
+    .meeting__item {
+      position: relative;
+      min-height: 300px;
+      padding: 50px calc(50% + 20px) 50px 20px;
+
+      &:nth-child(even) {
+        padding: 50px 20px 50px calc(50% + 20px);
+
+        .meeting__pic {
+          left: auto;
+          right: 50%;
+        }
+      }
+    }
+
+    .meeting__title { font-size: 36px; }
+
+    .meeting__pic {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 100%;
+      width: 50%;
+      max-width: 590px;
+      margin: 0;
+    }
+
+    &.meeting_revert {
+
+      .meeting__item {
+        padding: 50px 20px 50px calc(50% + 20px);
+
+        &:nth-child(even) {
+          padding: 50px calc(50% + 20px) 50px 20px;
+
+          .meeting__pic {
+            left: 50%;
+            right: auto;
+          }
+        }
+      }
+
+      .meeting__pic {
+        left: auto;
+        right: 50%;
+      }
+    }
+  }
+}
+
+@media (min-width: $large) {
+  .meeting {
+
+    .meeting__item {
+      padding: 50px calc(50% + 20px) 50px calc(50% - 590px);
+
+      &:nth-child(even) {
+        padding: 50px calc(50% - 590px) 50px calc(50% + 20px);
+      }
+    }
+
+    &.meeting_revert {
+
+      .meeting__item {
+        padding: 50px calc(50% - 590px) 50px calc(50% + 20px);
+
+        &:nth-child(even) {
+          padding: 50px calc(50% + 20px) 50px calc(50% - 590px);
+        }
+      }
+    }
+  }
+}
+/* --------------- /meeting --------------- */
