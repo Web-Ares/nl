@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/application.css">
 
     <script src="js/vendors/jquery-2.1.4.min.js"></script>
+    <script src="js/vendors/jquery.nicescroll.min.js"></script>
+    <script src="js/vendors/jquery.websters-select.js"></script>
     <script src="js/app.min.js"></script>
 </head>
 <body>
@@ -161,7 +163,7 @@
                 <!-- /articles__item -->
 
                 <!-- articles__item -->
-                <div class="articles__item">
+                <div class="articles__item articles__item_filter">
 
                     <!-- articles__item-content -->
                     <div class="articles__item-content">
@@ -169,6 +171,35 @@
                         <!-- articles__item-wrap -->
                         <div class="articles__item-wrap">
 
+                            <form action="#" class="filter">
+                                <header class="filter__header">
+                                    <h2 class="filter__title">INdex</h2>
+                                    Currntly showing: ALL
+                                </header>
+
+                                <div class="filter__content">
+                                    <div class="filter__content-row">
+                                        Sort By:
+                                        <select name="sort-by"  data-placeholder="Latest Posts">
+                                            <option value="0">LAtest Posts1</option>
+                                            <option value="0">LAtest Posts2</option>
+                                            <option value="0">LAtest Posts3</option>
+                                            <option value="0">LAtest Posts4</option>
+                                            <option value="0">LAtest Posts5</option>
+                                            <option value="0">LAtest Posts6</option>
+                                            <option value="0">LAtest Posts7</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="filter__content-row">
+                                        Search:
+                                        <fieldset class="filter__search">
+                                            <input type="search" name="text" placeholder="" required>
+                                            <button type="submit"></button>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </form>
 
                         </div>
                         <!-- /articles__item-wrap -->

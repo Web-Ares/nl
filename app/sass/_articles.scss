@@ -98,6 +98,18 @@
     }
   }
 
+  &__item_filter {
+
+    .articles__item-wrap {
+      padding: 0;
+      align-items: stretch;
+    }
+
+    .filter {
+      height: 100%;
+    }
+  }
+
   &__item_black {
     color: #323232;
   }
