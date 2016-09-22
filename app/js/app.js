@@ -19,127 +19,55 @@ $(function(){
             new Tabs( $( this ) );
         } );
 
-        $( '.services__form' ).each( function() {
-            new Contact( $( this ) );
+        $( '.site__header-search' ).each( function() {
+            new SearchShow( $( this ) );
         } );
-
-        $.each( $('.upload-file'), function (i) {
-
-            new UploadFile( $(this), i );
-
-        } );
-
-        $('.contact-scroll').on( {
-            'click': function (event) {
-                event.preventDefault();
-
-                var id  = $(this).attr('href'),
-
-                    top = $(id).offset().top;
-
-                $('body,html').animate({scrollTop: top}, 500);
-            }
-        } );
-
-        $(document).on( 'mailsent.wpcf7', function()  {
-
-            $( '.apply, .contact__form' ).each( function() {
-                var curElem = $( this );
-
-                if( curElem.attr( 'id' ) == $( 'body' ).attr( 'data-form' ) ) {
-
-                    if ( curElem.hasClass( 'contact__form' ) ) {
-                        curElem.parents( '.contact' ).find( '.contact__thank-you' ).addClass( 'active' );
-                    } else {
-                        curElem.addClass( 'thank-you' );
-                    }
-
-                }
-            } );
-
-        });
 
     });
 
-    var Contact = function(obj) {
+    var SearchShow = function (obj) {
 
-        //private properties
         var _obj = obj,
-            _path = _obj.data( 'path' ),
-            _request = new XMLHttpRequest();
+            _input = _obj.find('input');
 
-        //private methods
-        var _addEvents = function() {
+        var _addEvents = function () {
 
-                _obj.on( {
-                    'submit': function() {
+                _obj.on({
+                    'click': function(event){
 
-                        _ajaxRequest( $( this ) );
-
-                        return false;
-                    }
-                } );
-            },
-            _ajaxRequest = function( elem ) {
-
-                _request.abort();
-                _request = $.ajax({
-                    url: _path,
-                    data: elem.serialize(),
-                    dataType: 'html',
-                    timeout: 20000,
-                    type: "get",
-                    success: function () {
-                        elem.trigger( 'reset' );
-                        alert('Form sended');
-                    },
-                    error: function ( XMLHttpRequest ) {
-                        if( XMLHttpRequest.statusText != "abort" ) {
-                            alert( 'Error!' );
+                        if ( !_obj.hasClass( 'open' ) ) {
+                            _obj.addClass( 'open' );
+                            _input.focus();
+                            event = event || window.event;
+                            if (event.stopPropagation) {
+                                event.stopPropagation();
+                            } else {
+                                event.cancelBubble = true;
+                            }
                         }
                     }
                 });
 
-            },
-            _init = function() {
-                _addEvents();
-            };
-
-        //public properties
-
-        //public methods
-
-        _init();
-    };
-
-    var UploadFile = function ( obj, num ) {
-
-        //private properties
-        var _self = this,
-            _obj = obj,
-            _inputFile = obj.find( 'input[type=file]' ),
-            _inputText = obj.find( '.upload-file__path' );
-
-        //private methods
-        var _onEvents = function () {
-
-                _inputFile.on( {
-                    'change': function() {
-
-                        _inputText.text( $( this ).val() );
-
+                $( '.site' ).on({
+                    'click': function(){
+                        _obj.removeClass( 'open' );
                     }
-                } );
+                });
 
+                _input.on({
+                    'click': function(event){
+                        event = event || window.event;
+                        if (event.stopPropagation) {
+                            event.stopPropagation();
+                        } else {
+                            event.cancelBubble = true;
+                        }
+                    }
+                });
             },
+
             _init = function () {
-
-                _obj.attr( 'for', 'upload-file' + num );
-                _inputFile.attr( 'id', 'upload-file' + num );
-
-                obj[0].obj = self;
-                _onEvents();
-
+                _addEvents();
             };
 
         _init();
@@ -172,6 +100,8 @@ $(function(){
                     _mainSlider = new Swiper( _slider, {
                         pagination: _pagination,
                         loop: true,
+                        effect: "fade",
+                        speed: 1000,
                         autoplay: _duration,
                         paginationClickable: true
                     });

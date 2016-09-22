@@ -2,7 +2,8 @@
 .logo {
   display: block;
   @include absoluteCenter();
-  max-width: 200px;
+  width: 100px;
+  z-index: 2;
 
   img {
     display: block;
@@ -21,8 +22,8 @@
     position: relative;
     top: auto;
     left: auto;
-    width: 261px;
-    max-width: 100%;
+    width: auto;
+    margin-bottom: 33px;
     transform: translate(0, 0);
   }
 }

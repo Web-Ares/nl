@@ -1,16 +1,40 @@
 /* --------------- btn --------------- */
 .btn {
   display: inline-block;
-  padding: 5px 10px 7px;
-  background-color: #22aae2;
+  position: relative;
+  padding: 9px;
+  min-width: 100px;
+  background-color: #ed184c;
   color: #fff;
   font-size: 12px;
+  @include font-title();
+  text-transform: uppercase;
   text-align: center;
   border: none;
-  font-family: $font-light;
   transition: background .3s ease-in-out;
 
+  &:after {
+    display: inline-block;
+    padding: 0 0 0 5px;
+    content: '>';
+  }
+
   &:hover { background-color: #282a2b }
+
+  &_type2 {
+    padding: 14px;
+    min-width: 150px;
+  }
+
+  &_type3 {
+    color: #323232;
+    background: #fff;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: #fff;
+    }
+  }
 }
 
 @media (min-width: $small) {
@@ -21,8 +45,7 @@
 
 @media (min-width: $medium) {
   .btn {
-    padding: 10px 20px 15px;
-    font-size: 24px;
+
   }
 }
 

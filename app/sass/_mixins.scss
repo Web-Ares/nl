@@ -39,26 +39,20 @@
   font-style: normal;
 }
 
-@mixin font-semibold() {
-  font-family: $font-semibold;
-  font-weight: 400;
-  font-style: normal;
-}
-
 @mixin font-italic() {
   font-family: $font-italic;
   font-weight: 400;
   font-style: normal;
 }
 
-@mixin font-light() {
-  font-family: $font-light;
+@mixin font-bold-italic() {
+  font-family: $font-bold-italic;
   font-weight: 400;
   font-style: normal;
 }
 
-@mixin font-light-italic() {
-  font-family: $font-light-italic;
+@mixin font-title() {
+  font-family: $font-title;
   font-weight: 400;
   font-style: normal;
 }

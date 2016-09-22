@@ -2,8 +2,7 @@
 .menu {
   position: relative;
   height: 70px;
-  z-index: 3;
-  font-family: $font-light;
+  z-index: 1;
 
   .menu__btn {
     @include absoluteCenterY();
@@ -39,36 +38,47 @@
       content: '';
     }
 
-    &:hover { background: #22aae2; }
+    &:hover { background: #ed184c; }
   }
 
   .menu__wrap {
     position: absolute;
-    top: 0;
+    top: 70px;
     left: -310px;
     width: 300px;
-    padding: 65px 0 10px;
     z-index: 1;
     background: #fff;
-    box-shadow: 0 0 5px rgba(0,0,0,.75);
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.35);
     transition: left .3s ease-in-out;
   }
 
   .menu__item {
     display: block;
     position: relative;
-    padding: 5px 15px;
+    padding: 10px 15px;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
     color: #323232;
     transition: color .3s ease-in-out;
 
-    &:hover {
-      color: #22aae2;
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: #ed184c;
+      opacity: 0;
+      content: '';
     }
 
-    &.active {
-      color: #22aae2;
+    &:hover {
+      color: #ed184c;
+    }
+
+    &.active:before {
+      opacity: 1;
     }
   }
 
@@ -92,7 +102,7 @@
       &:hover {
 
         &:before,
-        &:after { background: #22aae2; }
+        &:after { background: #ed184c; }
       }
     }
 
@@ -110,7 +120,7 @@
   .menu {
     position: static;
     height: auto;
-    padding: 20px 20px 20px 31px;
+    margin: 0 35px;
 
     .menu__btn { display: none; }
 
@@ -123,18 +133,15 @@
       padding: 0;
       background: none;
       box-shadow: none;
-
-      > * {
-        border-left: 1px solid #a1a1a1;
-
-        &:first-child { border: none; }
-      }
     }
 
     .menu__item {
-      padding: 0 14px;
-      font-size: 18px;
-      text-transform: none;
+      padding: 18px 16px;
+
+      &:before {
+        width: 100%;
+        height: 5px;
+      }
     }
   }
 }
