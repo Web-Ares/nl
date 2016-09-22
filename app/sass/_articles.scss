@@ -71,6 +71,33 @@
     }
   }
 
+  &__item_contacts {
+
+    .articles__item-wrap {
+      padding: 0;
+      align-items: stretch;
+
+      .follow-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50%;
+        padding: 15px;
+      }
+
+      .never-miss-post {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50%;
+        padding: 15px;
+        border: 1px solid #929292;
+      }
+    }
+  }
+
   &__item_black {
     color: #323232;
   }

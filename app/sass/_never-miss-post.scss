@@ -1,0 +1,80 @@
+/* --------------- never-miss-post --------------- */
+.never-miss-post {
+  padding: 24px 16px 16px;
+  text-align: center;
+  font-size: 14px;
+  color: #323232;
+  background: #fff;
+  @include font-title();
+
+  &__title {
+    display: block;
+    margin-bottom: 13px;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  &__wrap {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 35px;
+    border: 1px solid #929292;
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 72px);
+      height: 100%;
+      padding: 0 10px;
+      border: none;
+      background: none;
+      font-size: 14px;
+      color: #323232;
+      @include font-title();
+    }
+
+    button[type=submit] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 72px;
+      height: 100%;
+      padding: 0;
+      border: none;
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      background: #150031;
+      @include font-title();
+      transition: background .3s ease-in-out;
+
+      &:hover { background: #ed184c }
+    }
+  }
+}
+
+@media (min-width: $small) {
+  .never-miss-post {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .never-miss-post {
+
+  }
+}
+
+@media (min-width: $large) {
+  .never-miss-post {
+
+  }
+}
+/* --------------- /never-miss-post --------------- */

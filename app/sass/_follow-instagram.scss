@@ -18,10 +18,14 @@
   }
 
   &__item {
-    position: relative;
     width: 50%;
-    padding-bottom: 50%;
     background-color: #e2e1e0;
+
+    &-container {
+      display: block;
+      position: relative;
+      padding-bottom: 100%;
+    }
 
     &-pic {
       position: absolute;
@@ -52,7 +56,6 @@
 
     &__item {
       width: 33.33333%;
-      padding-bottom: 33.33333%;
     }
   }
 }
@@ -62,7 +65,6 @@
 
     &__item {
       width: 16.66666%;
-      padding-bottom: 16.66666%;
     }
   }
 }
