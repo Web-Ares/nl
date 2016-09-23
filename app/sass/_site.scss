@@ -168,7 +168,8 @@
 			display: flex;
 			padding: 0;
 
-			> * { width: 50% }
+			.follow-social,
+			.never-miss-post { width: 50% }
 		}
 
 		&-menu {
