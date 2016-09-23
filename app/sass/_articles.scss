@@ -1,5 +1,6 @@
 /* --------------- articles --------------- */
 .articles {
+  padding: 12px 0 0;
 
   &__item {
     position: relative;
@@ -126,7 +127,7 @@
   }
 
   &__btn {
-    padding: 12.5px;
+    padding: 16.5px 0 11px;
     text-align: center;
   }
 }

@@ -6,6 +6,8 @@
   margin: 0 auto;
 
   &__title {
+    display: block;
+    margin-bottom: 4px;
     text-transform: uppercase;
     color: #323232;
     font-size: 18px;

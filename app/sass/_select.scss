@@ -19,7 +19,6 @@
 }
 .websters-select:before{
   content: '\2228';
-  font-size: .8em;
   @include absoluteCenterY();
   right: 0;
 }
