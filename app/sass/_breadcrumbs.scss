@@ -1,0 +1,48 @@
+/* --------------- breadcrumbs --------------- */
+.breadcrumbs {
+  padding: 10px 0;
+  font-size: 14px;
+
+  a,
+  a:visited {
+    color: #323232;
+
+    &:before {
+      margin-right: 3px;
+      content: '>';
+    }
+
+    &:first-child:before { display: none }
+
+    &:hover { text-decoration: underline }
+  }
+
+  span {
+    color: #ed184c;
+
+    &:before {
+      margin-right: 3px;
+      content: '>';
+    }
+  }
+}
+
+@media (min-width: $small) {
+  .breadcrumbs {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .breadcrumbs {
+    padding: 18px 0;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $large) {
+  .breadcrumbs {
+
+  }
+}
+/* --------------- /breadcrumbs --------------- */

@@ -1,0 +1,66 @@
+/* --------------- navigator --------------- */
+.navigator {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: #323232;
+  font-size: 14px;
+
+  a,
+  a:visited {
+    position: relative;
+    color: #323232;
+    transition: color .3s ease-in-out;
+
+    &:hover { color: #ed184c }
+  }
+
+  &__back {
+    padding-left: 25px;
+
+    &:before {
+      @include absoluteCenterY();
+      left: 0;
+      color: #ed184c;
+      content: '\2190';
+      transition: left .3s ease-in-out;
+    }
+
+    &:hover:before { left: -5px }
+  }
+
+  &__next {
+    padding-right: 25px;
+    text-align: right;
+
+    &:after {
+      @include absoluteCenterY();
+      right: 0;
+      color: #ed184c;
+      content: '\2192';
+      transition: right .3s ease-in-out;
+    }
+
+    &:hover:after { right: -5px }
+  }
+}
+
+@media (min-width: $small) {
+  .navigator {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .navigator {
+    padding: 18px 0;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $large) {
+  .navigator {
+
+  }
+}
+/* --------------- /navigator --------------- */

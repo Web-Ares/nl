@@ -1,0 +1,51 @@
+/* --------------- wrapper --------------- */
+.wrapper {
+  padding: 0 10px;
+
+  &__aside {
+
+    .follow-social {
+      height: 195px;
+      margin-bottom: 20px;
+
+      &__title { margin-bottom: 63px }
+    }
+
+    .never-miss-post {
+      margin-bottom: 20px;
+      padding: 24px 16px 55px;
+      border: 1px solid #929292;
+    }
+  }
+}
+
+@media (min-width: $small) {
+  .wrapper {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+    &__content {
+      width: calc(100% - 290px);
+    }
+
+    &__aside {
+      width: 266px;
+    }
+  }
+}
+
+@media (min-width: $large) {
+  .wrapper {
+
+  }
+}
+/* --------------- /wrapper --------------- */

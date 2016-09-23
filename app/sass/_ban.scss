@@ -1,0 +1,32 @@
+/* --------------- ban --------------- */
+.ban {
+  display: block;
+  margin-bottom: 20px;
+  transition: box-shadow .3s ease-in-out;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  &:hover { box-shadow: 0 0 10px rgba(0,0,0,.5); }
+}
+
+@media (min-width: $small) {
+  .ban {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .ban {
+
+  }
+}
+
+@media (min-width: $large) {
+  .ban {
+
+  }
+}
+/* --------------- /ban --------------- */
