@@ -11,16 +11,8 @@ $(function(){
             new MainSlider( $(this) );
         } );
 
-        $( '.main-slider__item' ).each( function() {
-            new NiceScroll( $( this ) );
-        } );
-
         $( '.shop-post' ).each( function() {
             new ShopPost( $( this ) );
-        } );
-
-        $( '.tabs' ).each( function() {
-            new Tabs( $( this ) );
         } );
 
         $( '.site__header-search' ).each( function() {
@@ -107,45 +99,6 @@ $(function(){
             },
             _init = function() {
                 _addEvents();
-            };
-
-        //public properties
-
-        //public methods
-
-        _init();
-    };
-
-    var NiceScroll = function(obj) {
-
-        //private properties
-        var _obj = obj;
-
-        //private methods
-        var _addEvents = function() {
-
-                $( window ).on( {
-                    'resize': function() {
-
-                        _obj.getNiceScroll().resize();
-                    }
-                } );
-
-            },
-            _addScroll = function() {
-                _obj.niceScroll( {
-                    cursorcolor:"#eeeeee",
-                    railalign: 'right',
-                    cursorwidth: 4,
-                    cursorborder: 0,
-                    cursorborderradius: 0,
-                    autohidemode: false,
-                    railpadding: { top: 0, right: 0, left: 0, bottom: 0 }
-                } );
-            },
-            _init = function () {
-                _addEvents();
-                _addScroll();
             };
 
         //public properties
@@ -261,55 +214,6 @@ $(function(){
             _init = function() {
                 _addEvents();
                 _addSlider();
-            };
-
-        //public properties
-
-        //public methods
-
-        _init();
-    };
-
-    var Tabs = function( obj ) {
-
-        //private properties
-        var _obj = obj,
-            _tabCaption = _obj.find( '.tabs__caption' ),
-            _tabContent = _obj.find( '.tabs__content' );
-
-        //private methods
-        var _addEvents = function() {
-
-                _tabCaption.on( {
-                    'click': function() {
-                        var curItem = $( this ),
-                            curContent = _tabContent.eq( curItem.index() );
-
-                        if( !( curItem.hasClass( 'active' ) ) ) {
-                            _tabCaption.removeClass( 'active' );
-                            _tabContent.css( {
-                                'display': 'none'
-                            } );
-                            curItem.addClass( 'active' );
-                            curContent.css( {
-                                'display': 'block'
-                            } );
-                        }
-
-                        return false;
-                    }
-                } );
-
-            },
-            _startView = function() {
-                _tabCaption.eq( 0 ).addClass( 'active' );
-                _tabContent.eq( 0 ).css( {
-                    'display': 'block'
-                } );
-            },
-            _init = function() {
-                _startView();
-                _addEvents();
             };
 
         //public properties
