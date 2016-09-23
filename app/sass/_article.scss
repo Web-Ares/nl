@@ -86,13 +86,9 @@
   .article {
 
     &__title,
-    h1 {
-      font-size: 64px;
-    }
+    h1 { font-size: 64px }
 
-    h2 {
-      font-size: 48px;
-    }
+    h2 { font-size: 48px }
 
     time {
       padding: 0 0 56px 21px;
@@ -104,12 +100,12 @@
       font-size: 18px;
     }
 
-    img {
-      margin-bottom: 25px;
-    }
+    img { margin-bottom: 25px }
 
     &__image {
       margin-bottom: 25px;
+
+      img { margin-bottom: 0 }
 
       &-info {
         padding: 9px 0;
@@ -120,9 +116,7 @@
     &__video {
       margin-bottom: 53px;
 
-      iframe {
-        height: 480px;
-      }
+      iframe { height: 480px }
     }
   }
 }

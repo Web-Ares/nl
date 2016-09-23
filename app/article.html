@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="css/application.css">
 
     <script src="js/vendors/jquery-2.1.4.min.js"></script>
-    <script src="js/vendors/jquery.nicescroll.min.js"></script>
-    <script src="js/vendors/jquery.websters-select.js"></script>
+    <script src="js/vendors/swiper.jquery.min.js"></script>
     <script src="js/app.min.js"></script>
 </head>
 <body>
@@ -80,6 +79,34 @@
 
     <!-- site__content -->
     <div class="site__content">
+
+        <!-- main-slider -->
+        <div class="main-slider main-slider_type2" data-duration="5000">
+
+            <div class="swiper-container">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide" style="background-image: url(pic/main-slider2.jpg)">
+
+                        <!-- main-slider__wrap -->
+                        <div class="main-slider__wrap">
+
+                            <p>Morbi lobortis dui a erat varius efficitur.</p>
+
+                        </div>
+                        <!-- /main-slider__wrap -->
+
+                    </div>
+
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+            </div>
+
+        </div>
+        <!-- /main-slider -->
 
         <!-- wrapper -->
         <div class="wrapper">
@@ -203,6 +230,16 @@
                 </nav>
                 <!-- /navigator -->
 
+                <!-- search -->
+                <form class="search" action="#">
+                    <h2 class="search__title">Search:</h2>
+                    <div class="search__wrap">
+                        <input type="search" name="text" placeholder="" required>
+                        <button type="submit"></button>
+                    </div>
+                </form>
+                <!-- /search -->
+
                 <!-- follow-social -->
                 <div class="follow-social">
                     <h2 class="follow-social__title">Follow Me</h2>
@@ -276,6 +313,129 @@
 
         </div>
         <!-- /wrapper -->
+
+        <!-- comments -->
+        <div class="comments">
+
+            <!-- comments__title -->
+            <h2 class="comments__title">Comments</h2>
+            <!-- /comments__title -->
+
+            <!-- comments__wrap -->
+            <div class="comments__wrap" style="height: 390px">
+
+            </div>
+            <!-- /comments__wrap -->
+
+        </div>
+        <!-- /comments -->
+
+        <!-- articles -->
+        <div class="articles">
+
+            <!-- articles__row -->
+            <div class="articles__row">
+
+                <!-- articles__item -->
+                <div class="articles__item articles__item_title">
+
+                    <!-- articles__item-content -->
+                    <div class="articles__item-content">
+
+                        <!-- articles__item-wrap -->
+                        <div class="articles__item-wrap">
+                            Related articles
+
+                        </div>
+                        <!-- /articles__item-wrap -->
+
+                    </div>
+                    <!-- /articles__item-content -->
+
+                </div>
+                <!-- /articles__item -->
+
+                <!-- articles__item -->
+                <div class="articles__item articles__item_black articles__item_related" style="background-image: url(pic/articles9.jpg)">
+
+                    <!-- articles__item-content -->
+                    <div class="articles__item-content">
+
+                        <!-- articles__item-wrap -->
+                        <div class="articles__item-wrap">
+
+                            <h2 class="articles__item-title">
+                                Travel
+                                <span>a long descriptive blog headline</span>
+                                <time date-time="2016-05-29">29 may 2016</time>
+                            </h2>
+
+                            <a href="#" class="btn">read more</a>
+
+                        </div>
+                        <!-- /articles__item-wrap -->
+
+                    </div>
+                    <!-- /articles__item-content -->
+
+                </div>
+                <!-- /articles__item -->
+
+                <!-- articles__item -->
+                <div class="articles__item articles__item_black articles__item_related" style="background-image: url(pic/articles10.jpg)">
+
+                    <!-- articles__item-content -->
+                    <div class="articles__item-content">
+
+                        <!-- articles__item-wrap -->
+                        <div class="articles__item-wrap">
+
+                            <h2 class="articles__item-title">
+                                fashion
+                                <span>a long descriptive blog headline</span>
+                                <time date-time="2016-05-29">29 may 2016</time>
+                            </h2>
+
+                            <a href="#" class="btn">read more</a>
+                        </div>
+                        <!-- /articles__item-wrap -->
+
+                    </div>
+                    <!-- /articles__item-content -->
+
+                </div>
+                <!-- /articles__item -->
+
+                <!-- articles__item -->
+                <div class="articles__item articles__item_black articles__item_related" style="background-image: url(pic/articles11.jpg)">
+
+                    <!-- articles__item-content -->
+                    <div class="articles__item-content">
+
+                        <!-- articles__item-wrap -->
+                        <div class="articles__item-wrap">
+
+                            <h2 class="articles__item-title">
+                                health
+                                <span>a long descriptive blog headline</span>
+                                <time date-time="2016-05-29">29 may 2016</time>
+                            </h2>
+
+                            <a href="#" class="btn">read more</a>
+                        </div>
+                        <!-- /articles__item-wrap -->
+
+                    </div>
+                    <!-- /articles__item-content -->
+
+                </div>
+                <!-- /articles__item -->
+
+            </div>
+            <!-- /articles__row -->
+
+        </div>
+        <!-- /articles -->
 
     </div>
     <!-- /site__content -->

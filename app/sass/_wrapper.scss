@@ -13,24 +13,34 @@
 
     .never-miss-post {
       margin-bottom: 20px;
-      padding: 24px 16px 55px;
+      padding: 17px 16px 55px;
       border: 1px solid #929292;
+
+      &__title { margin-bottom: 28px }
     }
   }
 }
 
 @media (min-width: $small) {
   .wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 10px;
 
+    &__content {
+      width: calc(100% - 260px);
+    }
+
+    &__aside {
+      width: 240px;
+    }
   }
 }
 
 @media (min-width: $medium) {
   .wrapper {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1240px;
-    margin: 0 auto;
     padding: 0 50px;
 
     &__content {

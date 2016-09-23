@@ -1,6 +1,6 @@
 /* --------------- follow-social --------------- */
 .follow-social {
-  padding: 24px 16px 10px;
+  padding: 24px 16px 0;
   text-align: center;
   font-size: 14px;
   color: #fff;
@@ -30,7 +30,7 @@
     overflow: hidden;
     width: 30px;
     height: 20px;
-    margin: 0 10.5px;
+    margin: 0 10.5px 10px;
     text-indent: 100%;
     background: url("../img/social.png") no-repeat;
     transition: background .3s ease-in-out;

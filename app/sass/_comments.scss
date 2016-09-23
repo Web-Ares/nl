@@ -1,0 +1,38 @@
+/* --------------- comments --------------- */
+.comments {
+  padding: 10px;
+
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    @include font-title();
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #323232;
+  }
+
+  &__wrap {
+    background: #323232;
+  }
+}
+
+@media (min-width: $small) {
+  .comments {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .comments {
+    max-width: 1240px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $large) {
+  .comments {
+
+  }
+}
+/* --------------- /comments --------------- */
