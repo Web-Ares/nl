@@ -15,6 +15,10 @@ $(function(){
             new NiceScroll( $( this ) );
         } );
 
+        $( '.shop-post' ).each( function() {
+            new ShopPost( $( this ) );
+        } );
+
         $( '.tabs' ).each( function() {
             new Tabs( $( this ) );
         } );
@@ -24,54 +28,6 @@ $(function(){
         } );
 
     });
-
-    var SearchShow = function (obj) {
-
-        var _obj = obj,
-            _input = _obj.find('input');
-
-        var _addEvents = function () {
-
-                _obj.on({
-                    'click': function(event){
-
-                        if ( !_obj.hasClass( 'open' ) ) {
-                            _obj.addClass( 'open' );
-                            _input.focus();
-                            event = event || window.event;
-                            if (event.stopPropagation) {
-                                event.stopPropagation();
-                            } else {
-                                event.cancelBubble = true;
-                            }
-                        }
-                    }
-                });
-
-                $( '.site' ).on({
-                    'click': function(){
-                        _obj.removeClass( 'open' );
-                    }
-                });
-
-                _input.on({
-                    'click': function(event){
-                        event = event || window.event;
-                        if (event.stopPropagation) {
-                            event.stopPropagation();
-                        } else {
-                            event.cancelBubble = true;
-                        }
-                    }
-                });
-            },
-
-            _init = function () {
-                _addEvents();
-            };
-
-        _init();
-    };
 
     var MainSlider = function(obj) {
 
@@ -190,6 +146,121 @@ $(function(){
             _init = function () {
                 _addEvents();
                 _addScroll();
+            };
+
+        //public properties
+
+        //public methods
+
+        _init();
+    };
+
+    var SearchShow = function (obj) {
+
+        var _obj = obj,
+            _input = _obj.find('input');
+
+        var _addEvents = function () {
+
+                _obj.on({
+                    'click': function(event){
+
+                        if ( !_obj.hasClass( 'open' ) ) {
+                            _obj.addClass( 'open' );
+                            _input.focus();
+                            event = event || window.event;
+                            if (event.stopPropagation) {
+                                event.stopPropagation();
+                            } else {
+                                event.cancelBubble = true;
+                            }
+                        }
+                    }
+                });
+
+                $( '.site' ).on({
+                    'click': function(){
+                        _obj.removeClass( 'open' );
+                    }
+                });
+
+                _input.on({
+                    'click': function(event){
+                        event = event || window.event;
+                        if (event.stopPropagation) {
+                            event.stopPropagation();
+                        } else {
+                            event.cancelBubble = true;
+                        }
+                    }
+                });
+            },
+
+            _init = function () {
+                _addEvents();
+            };
+
+        _init();
+    };
+
+    var ShopPost = function(obj) {
+
+        //private properties
+        var _obj = obj,
+            _window = $(window),
+            _swSlider = null,
+            _slider = _obj.find( '.swiper-container' ),
+            _duration = _obj.data('duration'),
+            _perView = 1,
+            _next = _obj.find( '.swiper-button-next' ),
+            _prev = _obj.find( '.swiper-button-prev' );
+
+        //private methods
+        var _addEvents = function() {
+
+                _window.on({
+                    'resize': function() {
+                        _changePerViewSlider();
+                        _setPerview();
+                    }
+                });
+
+            },
+            _addSlider = function() {
+
+                _changePerViewSlider();
+
+                _swSlider = new Swiper( _slider, {
+                    nextButton: _next,
+                    prevButton: _prev,
+                    speed: 800,
+                    autoplay: _duration,
+                    slidesPerView: _perView,
+                    paginationClickable: true
+                });
+
+                _setPerview();
+
+            },
+            _changePerViewSlider = function() {
+
+                if ( _window.width() < 640 ) {
+                    _perView = 1;
+                } else if ( _window.width() < 1200 ) {
+                    _perView = 2;
+                } else {
+                    _perView = 3;
+                }
+
+            },
+            _setPerview = function() {
+
+                _swSlider.params.slidesPerView = _perView;
+
+            },
+            _init = function() {
+                _addEvents();
+                _addSlider();
             };
 
         //public properties

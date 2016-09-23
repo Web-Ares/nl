@@ -1,6 +1,7 @@
 /* --------------- comments --------------- */
 .comments {
   padding: 10px;
+  margin-bottom: 20px;
 
   &__title {
     display: block;
@@ -26,7 +27,9 @@
   .comments {
     max-width: 1240px;
     padding: 0 50px;
-    margin: 0 auto;
+    margin: 0 auto 40px;
+
+    &__title { margin-bottom: 54px }
   }
 }
 
